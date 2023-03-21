@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-y$p=pvav3(_d+_29i_a87ss017nq6olt9)wi$zi-d(!jj+$4rp
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+CSRF_TRUSTED_ORIGINS = 'https://rhino-backend.up.railway.app'
 
 ALLOWED_HOSTS = ["*"]
 
@@ -77,7 +78,6 @@ TEMPLATES = [
 
 CORS_ORIGIN_ALLOW_ALL =True
 
-CSRF_TRUSTED_ORIGINS = 'https://rhino-backend.up.railway.app'
 
 WSGI_APPLICATION = 'rhinoBack.wsgi.application'
 
