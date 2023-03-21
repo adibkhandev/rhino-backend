@@ -74,9 +74,8 @@ TEMPLATES = [
         },
     },
 ]
- 
+
 CORS_ORIGIN_ALLOW_ALL =True
-CSRF_TRUSTED_ORIGINS = ["https://rhino-backend-production.up.railway.app"]
 
 WSGI_APPLICATION = 'rhinoBack.wsgi.application'
 
@@ -89,9 +88,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'railway' ,
         'USER':'root',
-        'PASSWORD':"qI6epRbjpjeALPoSJN0r",
-        'HOST':'containers-us-west-86.railway.app',
-        'PORT':'6422'
+        'PASSWORD':'1yTaJUMKALxVXdU9m0nF',
+        'HOST':'containers-us-west-28.railway.app',
+        'PORT':'6744'
     }
 }
 
@@ -176,7 +175,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
