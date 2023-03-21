@@ -77,7 +77,7 @@ TEMPLATES = [
 
 CORS_ORIGIN_ALLOW_ALL =True
 
-CSRF_TRUSTED_ORIGINS = 'https://*.rhino-backend.up.railway.app/'
+CSRF_TRUSTED_ORIGINS = 'https://rhino-backend.up.railway.app'
 
 WSGI_APPLICATION = 'rhinoBack.wsgi.application'
 
