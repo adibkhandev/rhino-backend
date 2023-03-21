@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-y$p=pvav3(_d+_29i_a87ss017nq6olt9)wi$zi-d(!jj+$4rp
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-CSRF_TRUSTED_ORIGINS = 'https://rhino-backend.up.railway.app'
+
 
 ALLOWED_HOSTS = ["*"]
 
@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CSRF_TRUSTED_ORIGINS = 'https://rhino-backend.up.railway.app'
 
 ROOT_URLCONF = 'rhinoBack.urls'
 
