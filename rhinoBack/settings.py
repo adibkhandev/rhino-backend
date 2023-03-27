@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y$p=pvav3(_d+_29i_a87ss017nq6olt9)wi$zi-d(!jj+$4rp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ["*"]
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CSRF_TRUSTED_ORIGINS = ['https://rhino-backend.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://rhino-backend.up.railway.app','.vercel.app']
 
 ROOT_URLCONF = 'rhinoBack.urls'
 
@@ -89,11 +89,11 @@ WSGI_APPLICATION = 'rhinoBack.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway' ,
-        'USER':'root',
-        'PASSWORD':'0Y3zS7VYta2jK9Mk8A00',
-        'HOST':'containers-us-west-137.railway.app',
-        'PORT':'7377'
+        'NAME': 'rhinoapidata' ,
+        'USER':'adibkhandev',
+        'PASSWORD':'password',
+        'HOST':'localhost',
+        'PORT':'3306'
     }
 }
 
