@@ -131,7 +131,7 @@ def addReview(request):
   rating = request.data['star']
   product_id = request.data['pk']
   product_instance = Product.objects.get(id=product_id)
-  review_instance = Review.objects.create(creater_pfp=user_instance.profile_pic,creater_name=user_name,review=review,rating=rating)
+  review_instance = Review.objects.create(creater_id=creater_id,creater_pfp=user_instance.profile_pic,creater_name=user_name,review=review,rating=rating)
   review_instance.save()
   if image1 is not None:
     image_instance = ReviewImages.objects.create(review=review_instance,image=image1)
@@ -168,6 +168,13 @@ def reviewImage(request):
     images = ReviewImages.objects.filter(review=Id)
     serialized = ReviewImagesSerializer(images,many=True)
     return Response(serialized.data)
+
+@api_view(['POST'])
+def deleteReview(request):
+    Id = request.data['id']
+    review_instance = Review.objects.get(id=Id)
+    review_instance.delete()
+    return Response()
 @api_view(['GET'])
 def ranker(request):
     all_products = Product.objects.order_by('-ordered')
@@ -224,3 +231,4 @@ def user_update(request):
         print('nai')
         print(request.data,pfp)
         return Response(user_serialized.data)
+

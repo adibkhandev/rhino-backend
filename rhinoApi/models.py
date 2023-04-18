@@ -8,6 +8,7 @@ from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.base_user import BaseUserManager
 # Create your models here.
 class Review(models.Model):
+	creater_id = models.IntegerField(null=True)
 	creater_pfp = models.ImageField(upload_to="images",null=True)
 	creater_name = models.CharField(max_length=20)
 	review = models.TextField()

@@ -14,6 +14,7 @@ urlpatterns = [
      path('orderplace/',views.orderPlace),
      path('ordered/',views.ordered),
     path('addrev/',views.addReview),
+    path('delrev/',views.deleteReview),
     path('showrev/',views.showReview),
     path('ranker/',views.ranker),
      path('news/',views.news),
