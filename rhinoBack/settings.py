@@ -86,22 +86,26 @@ WSGI_APPLICATION = 'rhinoBack.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'rhinoapidata' ,
+#         'USER':'adibkhandev',
+#         'PASSWORD':'password',
+#         'HOST':'localhost',
+#         'PORT':'3306'
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'railway' ,
         'USER':'root',
-        'PASSWORD':'ILKzKUcGuFQwp91IAVrT',
-        'HOST':'containers-us-west-175.railway.app',
-        'PORT':'6837'
+        'PASSWORD':'rkAeOE5CLcCQ2b90ym1g',
+        'HOST':'containers-us-west-32.railway.app',
+        'PORT':'7210'
     }
 }
-    # 'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'rhinoapidata' ,
-    #     'USER':'adibkhandev',
-    #     'PASSWORD':'password',
-    #     'HOST':'localhost',
-    #     'PORT':'3306'
 
 
 # Password validation
@@ -187,6 +191,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
  os.path.join(BASE_DIR,'static'),
  ]
+ 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
