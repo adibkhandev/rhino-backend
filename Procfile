@@ -1,1 +1,0 @@
-web: gunicorn rhinoBack.wsgi --log-file -
