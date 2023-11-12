@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 from datetime import timedelta
-
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CSRF_TRUSTED_ORIGINS = ['https://rhino-backend.up.railway.app','http://127.0.0.1:8000','http://localhost:3000']
+# CSRF_TRUSTED_ORIGINS = ["*"]
 
 ROOT_URLCONF = 'rhinoBack.urls'
 
@@ -96,17 +96,19 @@ WSGI_APPLICATION = 'rhinoBack.wsgi.application'
 #         'PORT':'3306'
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'railway' ,
+#         'USER':'root',
+#         'PASSWORD':'rkAeOE5CLcCQ2b90ym1g',
+#         'HOST':'containers-us-west-32.railway.app',
+#         'PORT':'7210'
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway' ,
-        'USER':'root',
-        'PASSWORD':'rkAeOE5CLcCQ2b90ym1g',
-        'HOST':'containers-us-west-32.railway.app',
-        'PORT':'7210'
-    }
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
