@@ -5,7 +5,7 @@ Django==3.2
 django-cors-headers==3.14.0
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.2.2
-filelock==3.13.1
+filelock==3
 gunicorn @ git+https://github.com/benoitc/gunicorn.git@430dcdd997b955fa1a8569a07d9cdcbac686fb35
 mysqlclient==2.1.1
 packaging==23.2
